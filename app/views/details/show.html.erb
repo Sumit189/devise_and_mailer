@@ -1,0 +1,28 @@
+<div class="card" >
+  <div class="card-header">
+    <h2 class="card-title d-flex justify-content-between mb-2">
+      <span>Employee Details</span>
+      <div>
+        <%= link_to 'Back', details_path, class:"btn btn-secondary text-white" %>
+        <%= link_to 'Edit',  edit_detail_path(@detail), class: 'btn btn-warning' %>
+        <%= link_to 'Destroy', @detail, method: :delete, data: { confirm: 'Are you sure, you want to delete this employee?' }, class:'btn btn-danger' %>
+      </div>
+    </h2>
+    <p id="notice"><%= notice %></p>
+  </div>
+
+  <div class="card-body">
+    <p>
+      <strong>Name:</strong>
+      <%= @detail.name %>
+    </p>
+    <p>
+      <strong>Email:</strong>
+      <%= @detail.email %>
+    </p>
+
+  </div>
+</div>
+
+
+
